@@ -1,0 +1,26 @@
+{
+  "name": "Macro-Calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {                                                         
+    "dev": "nodemon -r dotenv/config src/app.js --ext js,css,html dotenv_config_path=./config/.env",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KairosX32/Macro-Calculator.git"
+  },
+  "keywords": [],
+  "author": "Anuj Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KairosX32/Macro-Calculator/issues"
+  },
+  "homepage": "https://github.com/KairosX32/Macro-Calculator#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}

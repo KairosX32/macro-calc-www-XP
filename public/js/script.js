@@ -37,7 +37,7 @@ function calcMacros(){
     
     output.textContent = gramsOfFat + "f/" + gramsOfProtein + "p/" + gramsOfCarbs + "c"; //Displaying results in browser
     
-    explanation.textContent = `You will need to eat about ${gramsOfFat} grams of fat, ${gramsOfProtein} grams of protein, and ${gramsOfCarbs} grams of carbs.`; //Displaying extended results in browser
+    explanation.textContent = `With a daily intake of ${calories} calories, you will need to eat about ${gramsOfFat} grams of fat, ${gramsOfProtein} grams of protein, and ${gramsOfCarbs} grams of carbs.`; //Displaying extended results in browser
     
 
     function clearFields(){
@@ -57,3 +57,8 @@ onkeydown = function(event){
 }
 
 
+$(document).ready(() => {
+    $("#explanation").dblclick(() => {
+      $(this).hide();
+    })
+});

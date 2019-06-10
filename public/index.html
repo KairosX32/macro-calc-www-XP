@@ -1,42 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Macro Calculator</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <form>
-        <label for="calInput" class="tooltip">Calories:  <span class="tooltiptext">This should be the number of calories you need to eat everyday to either cut or bulk.</span></label> 
-        <input type="number"  id="calInput" placeholder="Enter Calories..." maxlength="5">
-       <p></p>
-        <label for="bodyWeight">Bodyweight: </label>
-        <input type="number" id="bodyWeight" placeholder="Enter Your Weight " maxlength="4">
-        <div class="switchy">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-light" href="#">Macro Calculator</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="option">
-                <label for="lb">Pounds</label><input type="radio" id="lb" value="lb" name="metric" checked>
-            </div>
-
-            <div class = "option">
-                <label for="kg">Kilograms</label><input type="radio" id="kg" value="kg" name="metric">
-            </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a
+                class="nav-link text-light"
+                href="http://scoobysworkshop.com/accurate-calorie-calculator/"
+                >Calorie Calculator <span class="sr-only">(current)</span></a
+              >
+            </li>
+          </ul>
         </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <form class="text-center mt-3">
+          <label for="calInput"
+            >Calories:
+            <!-- <span class="tooltiptext"
+              >This should be the number of calories you need to eat everyday to
+              either cut or bulk.</span> -->
+            </label
+          >
+          <input
+            type="number"
+            id="calInput"
+            placeholder="Enter Calories..."
+            maxlength="5"
+            class="form-control"
+          />
+          <p></p>
+          <label for="bodyWeight">Bodyweight: </label>
+          <input
+            type="number"
+            id="bodyWeight"
+            placeholder="Enter Your Weight "
+            maxlength="4"
+            class="form-control mb-3"
+          />
 
-        <p></p>
-        <a href="#" class="btn btn-white btn-animated" id="calorie-btn">Calculate</a>
-
-    </form>
-    
-
-    <h1 id="macros"></h1>
-    <h3 id="explanation"></h3>
-
-
+          <select name="metric" id="selector" class="form-control">
+              <option value="lbs">Pounds</option>
+              <option value="kg">Kilograms</option>
+          </select>
+          <p></p>
+          <a href="#" class="btn btn-primary mb-4" id="calorie-btn"
+            >Calculate</a
+          >
+        </form>
+      </div>
+      <h1 id="macros" class="text-center"></h1>
+      <h3 id="explanation" class="text-center mt-1"></h3>
+    </main>
     <script src="./js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
